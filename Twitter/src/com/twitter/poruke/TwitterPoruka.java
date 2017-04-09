@@ -4,6 +4,7 @@ package com.twitter.poruke;
  * Klasa koja predstavlja Twitter poruku
  * 
  * @author Bojan Tomic
+ * @version 0.0.1
  * 
  * */
 public class TwitterPoruka {
