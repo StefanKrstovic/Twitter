@@ -38,7 +38,10 @@ public class TwitterPoruka {
 	 * </ul>
 	 */
 	public void setKorisnik(String korisnik) {
-		if (korisnik == null || !korisnik.isEmpty())
+		/**if (korisnik == null || !korisnik.isEmpty())
+		 * Bug 001 -> uzvicnik ispred korisnik.isEmpty() ne treba da stoji tu. Ovo je uhvatila testSetKorisnik metoda
+		 */
+		if (korisnik == null || korisnik.isEmpty())
 			throw new RuntimeException("Ime korisnika mora biti uneto");
 		this.korisnik = korisnik;
 	}
@@ -48,7 +51,10 @@ public class TwitterPoruka {
 	 * @return sadrzaj poruke kao String
 	*/
 	public String getPoruka() {
-		return "poruka";
+		/**return "poruka";
+		 * Bug 003 -> Ne treba da vratimo string poruka, nego atribut
+		 */
+		return poruka;
 	}
 
 	/**
@@ -63,7 +69,10 @@ public class TwitterPoruka {
 	 * </ul>
 	 */
 	public void setPoruka(String poruka) {
-		if (this.poruka == null || this.poruka == new String("") || this.poruka.length() > 140)
+		/**if (this.poruka == null || this.poruka == new String("") || this.poruka.length() > 140)
+		 * Bug 002 -> treba proveravati parametar, a ne atribut objekta. Ovo je uhvatila testSetPoruka metoda
+		 */
+		if (poruka == null || poruka == "" || poruka.length() > 140)
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
 	}
