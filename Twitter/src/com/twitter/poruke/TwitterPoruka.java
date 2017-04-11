@@ -34,7 +34,7 @@ public class TwitterPoruka {
 	 * 
 	 * <ul>
 	 * <li>null</li>
-	 * <li>ne? prazan string</li>
+	 * <li>prazan string</li>
 	 * </ul>
 	 */
 	public void setKorisnik(String korisnik) {
