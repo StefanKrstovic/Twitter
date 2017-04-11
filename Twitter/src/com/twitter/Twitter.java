@@ -6,8 +6,8 @@ import com.twitter.poruke.TwitterPoruka;
 /**
  * Klasa koja predstavlja Twitter
  * 
- * @author Bojan Tomic
- * @version 0.0.1
+ * @author Stefan Krstovic
+ * @version 1.0.0
  * 
  */
 public class Twitter {
@@ -49,6 +49,12 @@ public class Twitter {
 	 * @param maxBroj najveci broj poruka koje je dozvoljeno vratiti
 	 * @param tag String koji treba da se nalazi unutar neke poruke
 	 * @return odgovarajuce poruke kao niz objekata klase TwitterPoruka
+	 * @throws java.lang.RuntimeException ako je unet tag:
+	 * 
+	 * <ul>
+	 * <li>null</li>
+	 * <li>prazan string</li>
+	 * </ul>
 	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
 		if (tag == null || tag.isEmpty())

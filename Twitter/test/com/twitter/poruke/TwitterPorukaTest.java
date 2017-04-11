@@ -60,8 +60,10 @@ public class TwitterPorukaTest {
 		t.setPoruka("p1");
 		TwitterPoruka t2 = new TwitterPoruka();
 		t2.setPoruka("p2");
-		if(t2.getPoruka().equals(t.getPoruka()))throw new RuntimeException("Bag u getPoruka metodi");
+		/*if(t2.getPoruka().equals(t.getPoruka()))throw new RuntimeException("Bag u getPoruka metodi");*/
+		assertFalse(t2.getPoruka().equals(t.getPoruka()));
 	}
+	
 	/**
 	 * Test method for
 	 * {@link com.twitter.poruke.TwitterPoruka#setPoruka(java.lang.String)}.

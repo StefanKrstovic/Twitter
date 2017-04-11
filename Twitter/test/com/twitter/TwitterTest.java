@@ -47,8 +47,10 @@ public class TwitterTest {
 		t.unesi("Ran", "dd");
 		t.unesi("Rand", "om");
 		
-		if(t.vratiSvePoruke().get(0).getKorisnik().equals("Ran") && t.vratiSvePoruke().get(0).getPoruka().equals("dd") && t.vratiSvePoruke().get(1).getKorisnik().equals("Rand") && t.vratiSvePoruke().get(1).getPoruka().equals("om"))assertEquals(1,1);
-		else assertEquals(1,0);
+		//if(t.vratiSvePoruke().get(0).getKorisnik().equals("Ran") && t.vratiSvePoruke().get(0).getPoruka().equals("dd") && t.vratiSvePoruke().get(1).getKorisnik().equals("Rand") && t.vratiSvePoruke().get(1).getPoruka().equals("om"))assertEquals(1,1);
+		//else assertEquals(1,0);
+		
+		assertEquals("RanddRandom", t.vratiSvePoruke().get(0).getKorisnik() + t.vratiSvePoruke().get(0).getPoruka() + t.vratiSvePoruke().get(1).getKorisnik() + t.vratiSvePoruke().get(1).getPoruka());
 	}
 	
 	public void bug005squasher(){
@@ -56,8 +58,10 @@ public class TwitterTest {
 		t.unesi("k1", "p1");
 		t.unesi("k2", "p2");
 		
-		if(t.vratiSvePoruke().get(0).getKorisnik().equals(t.vratiSvePoruke().get(1).getKorisnik()))assertEquals(1,0);
-		else assertEquals(1,1);
+		
+		//if(t.vratiSvePoruke().get(0).getKorisnik().equals(t.vratiSvePoruke().get(1).getKorisnik()))assertEquals(1,0);
+		//else assertEquals(1,1);
+		assertEquals("k1p1k2p2", t.vratiSvePoruke().get(0).getKorisnik() + t.vratiSvePoruke().get(0).getPoruka() + t.vratiSvePoruke().get(1).getKorisnik() + t.vratiSvePoruke().get(1).getPoruka());
 	}
 
 	/**

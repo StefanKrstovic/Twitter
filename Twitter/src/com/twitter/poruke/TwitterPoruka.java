@@ -3,8 +3,8 @@ package com.twitter.poruke;
 /**
  * Klasa koja predstavlja Twitter poruku
  * 
- * @author Bojan Tomic
- * @version 0.0.1
+ * @author Stefan Krstovic
+ * @version 1.0.0
  * 
  * */
 public class TwitterPoruka {
